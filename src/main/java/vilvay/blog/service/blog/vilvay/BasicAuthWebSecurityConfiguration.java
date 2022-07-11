@@ -16,7 +16,6 @@ public class BasicAuthWebSecurityConfiguration {
    @Bean
    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
        http.authorizeRequests()
-               .antMatchers("/public").permitAll()
                .anyRequest().authenticated()
                .and()
                .httpBasic();
